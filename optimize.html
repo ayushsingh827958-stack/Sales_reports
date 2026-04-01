@@ -6,50 +6,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clinic Performance Report</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #f4f6f9;
-            padding: 20px;
-            display: flex;
-            justify-content: center;
-        }
+       /* Mobile devices */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+        align-items: flex-start;
+    }
 
-        .container {
-            background: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            max-width: 600px;
-            width: 100%;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        }
+    .container {
+        padding: 15px;
+        border-radius: 8px;
+    }
 
-        h2 {
-            text-align: center;
-            margin-bottom: 20px;
-            color: #333;
-        }
+    h2 {
+        font-size: 18px;
+    }
 
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
+    table, thead, tbody, th, td, tr {
+        display: block;
+        width: 100%;
+    }
 
-        table,
-        th,
-        td {
-            border: 1px solid #ccc;
-        }
+    thead {
+        display: none;
+    }
 
-        th,
-        td {
-            padding: 8px;
-            text-align: left;
-        }
+    tr {
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        padding: 10px;
+        background: #fff;
+    }
 
-        tfoot td {
-            font-weight: bold;
-        }
+    td {
+        padding: 6px 8px;
+        text-align: right;
+        position: relative;
+    }
+
+    td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 8px;
+        top: 6px;
+        font-weight: bold;
+        text-align: left;
+    }
+}
+
+/* Tablets */
+@media (min-width: 601px) and (max-width: 992px) {
+    .container {
+        max-width: 90%;
+    }
+
+    th, td {
+        padding: 10px;
+    }
+}
     </style>
 </head>
 
