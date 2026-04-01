@@ -1,0 +1,20 @@
+{
+    "name": "Sales  Tracker",
+    "short_name": "Sales Reports",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#4CAF50",
+    "icons": [
+        {
+            "src": "Bar chart.png",
+            "sizes": "192x192",
+            "type": "png"
+        },
+        {
+            "src": "Bar chart.png",
+            "sizes": "512x512",
+            "type": "png"
+        }
+    ]
+}
